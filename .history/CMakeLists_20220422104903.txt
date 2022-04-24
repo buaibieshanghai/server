@@ -1,0 +1,45 @@
+cmake_minimum_required(VERSION 3.0.0)
+PROJECT(server)
+# project(syssys VERSION 0.1.0)
+set(CMAKE_CXX_STANDARD 11)
+include(CTest)
+enable_testing()
+# 命名变量
+set(CPACK_PROJECT_NAME ${PROJECT_NAME})
+set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
+include(CPack)
+FIND_PACKAGE(Boost REQUIRED )
+FIND_PACKAGE(Threads REQUIRED)
+# 用`mysql_config --cflags --lib`命令 查看 mysqldev的include和lib位置
+# 去哪里找头文件 相当于gcc/clang 中的-I(i的大写字母)参数
+include_directories(/usr/include/mysql)
+
+ADD_EXECUTABLE(server 
+main.cpp
+database.cpp
+database.h 
+share_sock.h
+share_sock.cpp
+sock_room.cpp
+sock_room.h
+sock_server.cpp
+sock_server.h
+data_json.cpp
+data_json.h
+)
+
+# 去哪里找库文件 .so .dll .dylib 相当于gcc 中的-L参数
+# link_directories(${LINK_DIR})
+# 要链接的库文件的名字 相当于gcc中的-l(小写的l)参数
+# target_link_libraries (${PROJECT_NAME} ${Boost_LIBRARIES}) #链接boost
+# target_link_libraries(${PROJECT_NAME} ${CMAKE_THREAD_LIBS_INIT}) #链接threads
+# target_link_libraries(${PROJECT_NAME}   
+# mysqlclient)
+
+
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.80 )
+PROJECT(server)
+set(CMAKE_CXX_STANDARD 11)
+
+
+FIND_PACKAGE(Boost REQUIRED )
+FIND_PACKAGE(Threads REQUIRED)
+
+include_directories(/usr/include/mysql)
+ADD_EXECUTABLE(server 
+main.cpp
+database.cpp
+database.h 
+share_sock.h
+share_sock.cpp
+# sock_room.cpp
+# sock_room.h
+sock_server.cpp
+sock_server.h
+)
+
+
+
+target_link_libraries (${PROJECT_NAME} ${Boost_LIBRARIES}) #链接boost
+target_link_libraries(${PROJECT_NAME} ${CMAKE_THREAD_LIBS_INIT}) #链接threads
+target_link_libraries(${PROJECT_NAME}   mysqlclient)

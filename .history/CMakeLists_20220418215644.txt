@@ -1,0 +1,25 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.80 )
+PROJECT(server)
+
+
+
+
+
+
+
+
+
+FIND_PACKAGE(Boost REQUIRED )
+FIND_PACKAGE(Threads REQUIRED)
+
+ADD_EXECUTABLE(server 
+main.cpp
+database.cpp
+database.h )
+include_directories(/usr/include/mysql)
+
+
+
+target_link_libraries (${PROJECT_NAME} ${Boost_LIBRARIES}) #链接boost
+target_link_libraries(${PROJECT_NAME} ${CMAKE_THREAD_LIBS_INIT}) #链接threads
+target_link_libraries(${PROJECT_NAME}   mysqlpp)

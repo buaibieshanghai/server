@@ -1,0 +1,13 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.80 )
+PROJECT(server)
+SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/executable)
+
+message(“BOOST_LIBRARYDIR =”${BOOST_LIBRARYDIR})
+
+FIND_PACKAGE(Boost REQUIRED )
+FIND_PACKAGE(Threads REQUIRED)
+
+ADD_EXECUTABLE(main main.cpp )
+
+target_link_libraries (${PROJECT_NAME} ${Boost_LIBRARIES}) #链接boost
+target_link_libraries(${PROJECT_NAME} ${CMAKE_THREAD_LIBS_INIT}) #链接threads

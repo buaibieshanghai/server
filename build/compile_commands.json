@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/root/server/build",
+  "command": "/usr/bin/g++   -I/usr/local/boost/include -I/usr/include/mysql    -o CMakeFiles/server.dir/main.cpp.o -c /root/server/main.cpp",
+  "file": "/root/server/main.cpp"
+},
+{
+  "directory": "/root/server/build",
+  "command": "/usr/bin/g++   -I/usr/local/boost/include -I/usr/include/mysql    -o CMakeFiles/server.dir/database.cpp.o -c /root/server/database.cpp",
+  "file": "/root/server/database.cpp"
+},
+{
+  "directory": "/root/server/build",
+  "command": "/usr/bin/g++   -I/usr/local/boost/include -I/usr/include/mysql    -o CMakeFiles/server.dir/share_sock.cpp.o -c /root/server/share_sock.cpp",
+  "file": "/root/server/share_sock.cpp"
+},
+{
+  "directory": "/root/server/build",
+  "command": "/usr/bin/g++   -I/usr/local/boost/include -I/usr/include/mysql    -o CMakeFiles/server.dir/sock_room.cpp.o -c /root/server/sock_room.cpp",
+  "file": "/root/server/sock_room.cpp"
+},
+{
+  "directory": "/root/server/build",
+  "command": "/usr/bin/g++   -I/usr/local/boost/include -I/usr/include/mysql    -o CMakeFiles/server.dir/sock_server.cpp.o -c /root/server/sock_server.cpp",
+  "file": "/root/server/sock_server.cpp"
+},
+{
+  "directory": "/root/server/build",
+  "command": "/usr/bin/g++   -I/usr/local/boost/include -I/usr/include/mysql    -o CMakeFiles/server.dir/data_json.cpp.o -c /root/server/data_json.cpp",
+  "file": "/root/server/data_json.cpp"
+}
+]

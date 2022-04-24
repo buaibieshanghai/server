@@ -1,0 +1,1 @@
+/usr/bin/g++     CMakeFiles/server.dir/main.cpp.o CMakeFiles/server.dir/database.cpp.o CMakeFiles/server.dir/share_sock.cpp.o CMakeFiles/server.dir/sock_room.cpp.o CMakeFiles/server.dir/sock_server.cpp.o CMakeFiles/server.dir/data_json.cpp.o  -o server -lpthread -lmysqlclient 

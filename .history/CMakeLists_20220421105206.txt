@@ -1,0 +1,47 @@
+cmake_minimum_required(VERSION 3.0.0)
+
+# include(CTest)
+# enable_testing()
+
+
+# set(CPACK_PROJECT_NAME ${PROJECT_NAME})
+# set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
+# include(CPack)
+
+
+
+PROJECT(server)
+set(CMAKE_CXX_STANDARD 11)
+
+
+FIND_PACKAGE(Boost REQUIRED )
+FIND_PACKAGE(Threads REQUIRED)
+
+include_directories(/usr/include/mysql)
+ADD_EXECUTABLE(server 
+main.cpp
+database.cpp
+database.h 
+share_sock.h
+share_sock.cpp
+sock_room.cpp
+sock_room.h
+sock_server.cpp
+sock_server.h
+data_json.cpp
+data_json.h
+)
+
+
+
+target_link_libraries (${PROJECT_NAME} ${Boost_LIBRARIES}) #链接boost
+target_link_libraries(${PROJECT_NAME} ${CMAKE_THREAD_LIBS_INIT}) #链接threads
+target_link_libraries(${PROJECT_NAME}   mysqlclient)
+
+
+
+
+
+
+
+
